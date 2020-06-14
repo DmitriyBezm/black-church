@@ -1,0 +1,9 @@
+include ../button/index
+
+mixin action-button(params = {})
+  +button({
+    class: `action-button ${params.class ? params.class : ''}`,
+    theme: 'white'
+  })
+    span.action-button__text #{params.text}
+    include ../icons/arrow-right

@@ -1,5 +1,8 @@
+include ../button/index
+include ../action-button/index
+
 header(class="header")
-  div(class="header__content container row row--full-height")
+  div(class="header__content container row row--full-height row--justify-between")
     div(class="column row")
       a(
         class="header__logo"
@@ -20,3 +23,10 @@ header(class="header")
           class="link header__link column column--with-offsets"
           href="#"
         ) Learn
+    div(class="row")
+      div(class="column column--with-offsets")
+       +action-button({
+         text: 'Sign Up Free'
+       })
+      div(class="column column--with-offsets")
+        +button() Log In
