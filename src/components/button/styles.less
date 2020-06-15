@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.button {
+  height: @button-height;
+  min-width: @button-width;
+  border: none;
+  font-family: @font-family;
+  border-radius: @button-radius;
+  background-color: @button-primary;
+  font-size: @heading-6;
+  color: @white;
+  cursor: pointer;
+  transition: background-color 0.35s;
+  padding-left: @button-hor-padding;
+  padding-right: @button-hor-padding;
+
+  &:hover {
+    //background-color: rgba(@primary-color, 0.8);
+  }
+
+  &--white {
+    background-color: @white;
+    color: @black;
+    box-shadow: @button-shadow;
+
+    &:hover {
+      //background-color: rgba(@secondary-color, 0.8);
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+
+@block: typography;
+
+.@{block} {
+  color: @black;
+  font-family: @font-family;
+  font-size: @font-size;
+
+  &--level-1 {
+    font-size: @heading-1;
+  }
+  &--level-2 {
+    font-size: @heading-2;
+  }
+  &--level-3 {
+    font-size: @heading-3;
+  }
+  &--level-4 {
+    font-size: @heading-4;
+  }
+  &--level-5 {
+    font-size: @heading-5;
+  }
+  &--level-6 {
+    font-size: @heading-6;
+  }
+
+  &--family-second {
+    font-family: @font-family-second;
+  }
+}
+
+h1.@{block},
+h2.@{block},
+h3.@{block},
+h4.@{block},
+h5.@{block},
+h6.@{block} {
+  line-height: 1.1;
+}

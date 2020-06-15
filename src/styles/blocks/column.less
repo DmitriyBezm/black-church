@@ -1,0 +1,24 @@
+@import "../variables";
+
+.column {
+  width: auto;
+
+  &--with-offsets {
+    padding-left: @column-inner-offset;
+    padding-right: @column-inner-offset;
+  }
+
+  &--flex {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--self-start {
+    align-self: flex-start;
+  }
+}

@@ -1,7 +1,0 @@
-mixin button(params = {})
-  button(
-    class=`button ${params.theme ? `button--${params.theme}` : ''} ${params.class ? params.class : ''}`
-    type=params.type
-  )
-    if (block)
-      block

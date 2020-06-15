@@ -1,0 +1,51 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "parser": "babel-eslint",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-shadow": "off",
+    "no-console": "off",
+    "no-case-declarations": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "max-classes-per-file": ["error", 2],
+    "react/destructuring-assignment": [1, "always", { "ignoreClassFields": true }],
+    "react/prop-types": [1, { "skipUndeclared": true }],
+    "react/forbid-prop-types": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "react/no-array-index-key": "off",
+    "react/jsx-boolean-value": 1,
+    "react/jsx-fragments": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "jsx-a11y/label-has-associated-control": [2, {
+      "controlComponents": ["Input", "Search", "Select"]
+    }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
+  }
+}
