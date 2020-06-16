@@ -1,0 +1,16 @@
+@import "variables";
+
+@minimal-size: @font-size;
+
+.media-if(@heading, @media-query) when (@heading >= @font-size) {
+  @media (max-width: @screen-lg-max) {
+    font-size: @heading;
+  }
+}
+
+.font-sizes(@heading) {
+  font-size: @heading;
+  .media-if(0.9 * @heading, @screen-lg-max);  // 992
+  .media-if(0.75 * @heading, @screen-md-max); // 768px
+  .media-if(0.6 * @heading, @screen-sm-max);  // 576
+}
