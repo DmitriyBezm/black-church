@@ -29,6 +29,26 @@
   &--family-second {
     font-family: @font-family-second;
   }
+
+  &--brown {
+    color: @brown;
+  }
+
+  &--black {
+    color: @black;
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--normal {
+    font-weight: normal;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
 }
 
 h1.@{block},
@@ -38,4 +58,10 @@ h4.@{block},
 h5.@{block},
 h6.@{block} {
   line-height: 1.1;
+}
+
+p.@{block},
+span.@{block} {
+  line-height: 1.56;
+  color: @brown;
 }

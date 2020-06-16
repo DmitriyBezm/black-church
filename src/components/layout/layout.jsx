@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Header } from '../header';
+import { TryForFree } from '../try-for-free';
+import { Footer } from '../footer';
 import './styles.less';
 
 export function Layout({ children, className }) {
@@ -14,9 +16,8 @@ export function Layout({ children, className }) {
       <main className="layout__content">
         {children}
       </main>
-      <footer className="layout__footer">
-        Footer
-      </footer>
+      <TryForFree />
+      <Footer />
     </div>
   );
 }

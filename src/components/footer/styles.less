@@ -1,0 +1,37 @@
+@import "../../styles/variables";
+
+.footer {
+  background-color: @primary-light;
+  padding-top: 65px;
+  padding-bottom: 130px;
+
+  &__links {
+    list-style: none;
+    width: 165px;
+    padding: 0;
+    margin-right: 125px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__links-section {
+    margin-bottom: 0.83em;
+  }
+
+  &__link-item {
+    margin-bottom: 0.6em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: @brown;
+    transition: color @duration;
+    line-height: 1.5;
+    &:hover {
+      color: rgba(@brown, 0.7);
+    }
+  }
+}

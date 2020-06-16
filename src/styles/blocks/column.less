@@ -1,8 +1,6 @@
 @import "../variables";
 
 .column {
-  width: auto;
-
   &--with-offsets {
     padding-left: @column-inner-offset;
     padding-right: @column-inner-offset;
@@ -20,5 +18,9 @@
 
   &--self-start {
     align-self: flex-start;
+  }
+
+  &--self-end {
+    align-self: flex-end;
   }
 }

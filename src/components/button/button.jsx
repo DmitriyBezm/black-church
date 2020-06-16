@@ -7,12 +7,17 @@ const ButtonTheme = {
   WHITE: 'white',
 };
 
+const ButtonSize = {
+  SMALL: 'small',
+};
+
 export function Button({
   children,
   theme,
   type = 'text',
   className,
   onClick,
+  size,
 }) {
   return (
     // eslint-disable-next-line react/button-has-type
@@ -24,6 +29,7 @@ export function Button({
         [className]: className,
         button: true,
         'button--white': theme === ButtonTheme.WHITE,
+        [`button--${size}`]: size,
       })
     }
     >
@@ -34,3 +40,4 @@ export function Button({
 
 Button.Theme = ButtonTheme;
 Button.Action = ActionButton;
+Button.Size = ButtonSize;

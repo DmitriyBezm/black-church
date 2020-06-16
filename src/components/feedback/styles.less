@@ -1,0 +1,34 @@
+@import "../../styles/variables";
+
+@block: feedback;
+
+.@{block} {
+  &__title {
+    margin-bottom: 2em;
+  }
+
+  &__avatar {
+    flex: 0 0 130px;
+    height: 130px;
+    background-color: @image-background-color;
+    border-radius: 50%;
+    margin-right: 30px;
+    overflow: hidden;
+  }
+
+  &__content-title {
+    margin-bottom: 0.7em;
+  }
+
+  &__message, &__content-title {
+    max-width: 560px;
+  }
+
+  &__message {
+    margin-bottom: 1.4em;
+  }
+
+  p.@{block}__message {
+    line-height: 1.8;
+  }
+}

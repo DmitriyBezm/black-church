@@ -27,12 +27,16 @@ export function Header() {
             <Button.Action
               className="header__button"
               theme={Button.Theme.WHITE}
+              size={Button.Size.SMALL}
             >
               Sign Up Free
             </Button.Action>
           </div>
           <div className="column column--with-offsets">
-            <Button className="header__button">
+            <Button
+              className="header__button"
+              size={Button.Size.SMALL}
+            >
               Log In
             </Button>
           </div>

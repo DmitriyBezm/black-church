@@ -28,6 +28,11 @@ function createTypography(Tag = TAGS.H1, defaultLevel) {
     second,
     className,
     level,
+    brown,
+    bold,
+    normal,
+    black,
+    uppercase,
   }) {
     const modifier = LEVELS[level || defaultLevel];
     return (
@@ -37,6 +42,11 @@ function createTypography(Tag = TAGS.H1, defaultLevel) {
           typography: true,
           [`typography--${modifier}`]: modifier,
           'typography--family-second': second,
+          'typography--brown': brown,
+          'typography--bold': bold,
+          'typography--normal': normal,
+          'typography--black': black,
+          'typography--uppercase': uppercase,
         })
       }
       >

@@ -1,8 +1,8 @@
 @import "../../styles/variables";
 
 .button {
-  height: @button-height;
-  min-width: @button-width;
+  height: @button-large-height;
+  min-width: @button-large-width;
   border: none;
   font-family: @font-family;
   border-radius: @button-radius;
@@ -13,9 +13,10 @@
   transition: background-color 0.35s;
   padding-left: @button-hor-padding;
   padding-right: @button-hor-padding;
+  box-sizing: border-box;
 
   &:hover {
-    //background-color: rgba(@primary-color, 0.8);
+    background-color: rgba(@button-primary, 0.7);
   }
 
   &--white {
@@ -24,7 +25,12 @@
     box-shadow: @button-shadow;
 
     &:hover {
-      //background-color: rgba(@secondary-color, 0.8);
+      background-color: rgba(@black, 0.05);
     }
+  }
+
+  &--small {
+    height: @button-height;
+    min-width: @button-width;
   }
 }
