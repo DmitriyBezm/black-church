@@ -7,7 +7,7 @@ export function TryForFree() {
   return (
     <div className="try-for-free">
       <div className="container">
-        <div className="row">
+        <div className="row row--sm">
           <div className="column column--with-offsets column--flex">
             <Typography.H2 className="try-for-free__title">
               Try for free!
@@ -23,13 +23,13 @@ export function TryForFree() {
             </Typography.P>
           </div>
           <div className="column column--with-offsets column--flex">
-            <div className="row row--justify-end">
-              <div className="column column--with-offsets">
+            <div className="row row--justify-end row--sm try-for-free__buttons">
+              <div className="column column--with-offsets try-for-free__button">
                 <Button.Action theme={Button.Theme.WHITE}>
                   Sign Up Free
                 </Button.Action>
               </div>
-              <div className="column column--with-offsets">
+              <div className="column column--with-offsets try-for-free__button">
                 <Button>
                   Log In
                 </Button>

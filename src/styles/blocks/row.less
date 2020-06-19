@@ -28,4 +28,19 @@
   &--align-start {
     align-items: flex-start;
   }
+
+  &--sm {
+    @media (max-width: @screen-sm-max) {
+      flex-direction: column;
+      & > .column--with-offsets {
+        padding: 0;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }

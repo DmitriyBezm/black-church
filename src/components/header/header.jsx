@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../button';
+import { MenuIcon } from '../icons';
 import './styles.less';
 
 export function Header() {
@@ -23,7 +24,7 @@ export function Header() {
           </nav>
         </div>
         <div className="row">
-          <div className="column column--with-offsets">
+          <div className="column column--with-offsets header__sign-buttons">
             <Button.Action
               className="header__button"
               theme={Button.Theme.WHITE}
@@ -32,7 +33,7 @@ export function Header() {
               Sign Up Free
             </Button.Action>
           </div>
-          <div className="column column--with-offsets">
+          <div className="column column--with-offsets header__sign-buttons">
             <Button
               className="header__button"
               size={Button.Size.SMALL}
@@ -40,6 +41,9 @@ export function Header() {
               Log In
             </Button>
           </div>
+          <Button.Icon className="header__menu-button">
+            <MenuIcon className="header__menu-icon" />
+          </Button.Icon>
         </div>
       </div>
     </header>

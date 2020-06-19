@@ -47,8 +47,8 @@ export function Main() {
   return (
     <Layout className="main-page">
       <section className="main-page__intro">
-        <div className="container row row--full-height">
-          <div className="column column--flex column--with-offsets">
+        <div className="main-page__intro-row container row row--full-height row--sm">
+          <div className="main-page__intro-text column column--flex column--with-offsets">
             <Typography className="main-page__title" second>
               Create a black church website in minutes
             </Typography>
@@ -66,6 +66,7 @@ export function Main() {
             column--flex
             column--with-offsets
             column--align-center
+            main-page__banner
             "
           >
             <img className="main-page__main-image" src={intro} alt="intro" />
@@ -78,7 +79,14 @@ export function Main() {
           <Typography.H2 second className="main-page__instruction-title">
             Easily create your black church website
           </Typography.H2>
-          <ul className="main-page__instruction-list row row--justify-between row--align-start">
+          <ul className="
+            main-page__instruction-list
+            row
+            row--justify-between
+            row--align-start
+            row--sm
+            "
+          >
             {INSTRUCTION_LIST.map(({
               id,
               title,
@@ -89,12 +97,14 @@ export function Main() {
                 <div className="main-page__instruction-item-icon">
                   <Icon />
                 </div>
-                <Typography.H6 className="main-page__instruction-item-title">
-                  {title}
-                </Typography.H6>
-                <Typography.P className="main-page__instruction-item-title">
-                  {note}
-                </Typography.P>
+                <div>
+                  <Typography.H6 className="main-page__instruction-item-title">
+                    {title}
+                  </Typography.H6>
+                  <Typography.P className="main-page__instruction-item-title">
+                    {note}
+                  </Typography.P>
+                </div>
               </li>
             ))}
           </ul>
@@ -109,12 +119,18 @@ export function Main() {
       </section>
       <section className="main-page__features">
         <div className="container">
-          <div className="row row--align-start main-page__feature-mobile">
-            <div className="column column--with-offsets column--flex column--self-end">
+          <div className="
+            row
+            row--sm
+            row--align-start
+            main-page__feature-mobile
+            "
+          >
+            <div className="column column--with-offsets column--flex column--sm-self-end">
               <img className="main-page__feature-cover" src={mobile} alt="mobile friendly" />
             </div>
             <div className="column column--with-offsets column--flex">
-              <div className="main-page__feature-info column column--self-end">
+              <div className="main-page__feature-info-head column column--sm-self-end">
                 <Typography.H2 className="main-page__feature-title">
                   Beautiful mobile-friendly templates for your black church website
                 </Typography.H2>
@@ -124,9 +140,15 @@ export function Main() {
               </div>
             </div>
           </div>
-          <div className="row row--align-start main-page__feature-mobile">
+          <div className="
+            row
+            row--sm
+            row--align-start
+            main-page__feature-info
+            "
+          >
             <div className="column column--with-offsets column--flex">
-              <div className="main-page__feature-info column column--self-start">
+              <div className="column column--self-start">
                 <Typography.H2 className="main-page__feature-title">
                   Effortlessly embed a live stream on your website
                 </Typography.H2>
@@ -134,7 +156,7 @@ export function Main() {
                   Black ChMS Sites, embedding a live stream on your website with Facebook,
                   YouTube, or Vimeo is easy like Sunday morning.
                 </Typography.P>
-                <Button>
+                <Button className="main-page__feature-info-button">
                   Get Started
                 </Button>
               </div>

@@ -23,4 +23,11 @@
   &--self-end {
     align-self: flex-end;
   }
+
+  &--sm-self-end {
+    align-self: flex-end;
+    @media (max-width: @screen-xs) {
+      align-self: unset;
+    }
+  }
 }

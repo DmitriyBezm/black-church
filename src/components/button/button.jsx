@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { ActionButton } from './action-button';
+import { IconButton } from './icon-button';
 import './styles.less';
 
 const ButtonTheme = {
@@ -41,3 +42,4 @@ export function Button({
 Button.Theme = ButtonTheme;
 Button.Action = ActionButton;
 Button.Size = ButtonSize;
+Button.Icon = IconButton;

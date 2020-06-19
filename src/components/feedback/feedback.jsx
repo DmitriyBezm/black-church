@@ -30,9 +30,9 @@ export function Feedback({
       <Typography.H3 className="feedback__title">
         {title}
       </Typography.H3>
-      <div className="row row--align-start">
+      <div className="row row--align-start row--sm">
         <div className="feedback__avatar">
-          <img src={profileUrl} alt="profile" />
+          <img className="feedback__avatar-img" src={profileUrl} alt="profile" />
         </div>
         <div className="feedback__content">
           <Typography.H6
@@ -52,14 +52,14 @@ export function Feedback({
           <Typography.P className="feedback__message">
             {message}
           </Typography.P>
-          <div className="row">
+          <div className="row row--sm">
             <div className="column column--with-offsets">
-              <Button>
+              <Button className="feedback__button">
                 See more reviews
               </Button>
             </div>
             <div className="column column--with-offsets">
-              <Button.Action theme={Button.Theme.WHITE}>
+              <Button.Action theme={Button.Theme.WHITE} className="feedback__button">
                 Start on Instant Demo
               </Button.Action>
             </div>

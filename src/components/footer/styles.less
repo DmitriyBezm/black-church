@@ -5,6 +5,11 @@
   padding-top: 65px;
   padding-bottom: 130px;
 
+  @media (max-width: @screen-sm-max) {
+    padding-top: 40px;
+    padding-bottom: 65px;
+  }
+
   &__links {
     list-style: none;
     width: 165px;
@@ -12,6 +17,10 @@
     margin-right: 125px;
     &:last-child {
       margin-right: 0;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      margin-bottom: 20px;
     }
   }
 
@@ -30,6 +39,9 @@
     color: @brown;
     transition: color @duration;
     line-height: 1.5;
+    @media (max-width: @screen-sm-max) {
+      font-size: 14px;
+    }
     &:hover {
       color: rgba(@brown, 0.7);
     }

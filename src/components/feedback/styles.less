@@ -14,6 +14,19 @@
     border-radius: 50%;
     margin-right: 30px;
     overflow: hidden;
+
+    @media (max-width: @screen-sm-max) {
+      flex: 0 0 100px;
+      height: 100px;
+      width: 100px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__avatar-img {
+    display: block;
+    width: 100%;
   }
 
   &__content-title {
@@ -26,9 +39,18 @@
 
   &__message {
     margin-bottom: 1.4em;
+
+    @media (max-width: @screen-sm-max) {
+      font-size: 14px;
+      margin-bottom: 2em;
+    }
   }
 
   p.@{block}__message {
     line-height: 1.8;
+  }
+
+  &__button {
+    margin-bottom: 20px;
   }
 }

@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="row row--align-start">
+        <div className="row row--align-start row--sm">
           {FOOTER_LINKS.map(({ links, section, id }) => (
             <ul className="footer__links column column--with-offsets" key={id}>
               <Typography.H6 className="footer__links-section" uppercase>

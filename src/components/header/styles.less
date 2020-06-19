@@ -1,12 +1,35 @@
 @import "../../styles/variables";
 
 .header {
+  position: relative;
   height: @header-height;
   background-color: @white;
+  z-index: 100;
+  @media (max-width: @screen-sm-max) {
+    height: @header-sm-height;
+  }
 
   &__logo {
     font-size: @heading-4;
     color: @black;
     margin-right: 80px;
+    @media (max-width: @screen-md-max) {
+      margin-right: 40px;
+      font-size: @heading-5;
+    }
+  }
+
+  & &__menu-icon {
+    display: none;
+    width: 24px;
+    @media (max-width: @screen-sm-max) {
+      display: block;
+    }
+  }
+
+   & &__navigation, & &__sign-buttons {
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
   }
 }
