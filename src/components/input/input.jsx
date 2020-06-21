@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { WithButton } from './with-button';
 import { Clipboard } from './clipboard';
@@ -14,7 +14,6 @@ export function Input({
   name,
   placeholder,
   className,
-  focus,
   error,
   warning,
   disabled,
@@ -22,11 +21,27 @@ export function Input({
   ...rest
 }) {
   const message = warning || error;
+  const [focused, setFocus] = useState(false);
+
+  const handleFocus = (event) => {
+    setFocus(true);
+    if (onFocus) {
+      onFocus(event);
+    }
+  };
+
+  const handleBlur = (event) => {
+    setFocus(false);
+    if (onFocus) {
+      onBlur(event);
+    }
+  };
+
   return (
     <label className={classNames({
       [className]: className,
       input: true,
-      'input--focus': focus,
+      'input--focus': focused,
       'input--error': error,
       'input--warning': warning,
       'input--disabled': disabled,
@@ -39,8 +54,8 @@ export function Input({
         type={type}
         value={value}
         onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         name={name}
         placeholder={placeholder}
         disabled={disabled}

@@ -1,5 +1,53 @@
 @import "../../styles/variables";
 
-.invite-page {
-  
+.login-page {
+  &__title {
+    margin-bottom: 1em;
+  }
+  &__card {
+    margin-bottom: 40px;
+  }
+  &__form-wrap {
+    position: relative;
+    z-index: 1;
+  }
+  &__row {
+    margin-bottom: 30px;
+  }
+  &__button {
+    width: 100%;
+  }
+  &__welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: @primary;
+  }
+  &__background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    &-icon {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__note {
+    text-align: center;
+  }
+  &__note-wrap {
+    padding-left: 60px;
+    padding-right: 60px;
+    @media (max-width: @screen-md-max) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media (max-width: @screen-sm-max) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }

@@ -33,6 +33,7 @@ function createTypography(Tag = TAGS.H1, defaultLevel) {
     normal,
     black,
     uppercase,
+    primary,
   }) {
     const modifier = LEVELS[level || defaultLevel];
     return (
@@ -46,6 +47,7 @@ function createTypography(Tag = TAGS.H1, defaultLevel) {
           'typography--bold': bold,
           'typography--normal': normal,
           'typography--black': black,
+          'typography--primary': primary,
           'typography--uppercase': uppercase,
         })
       }

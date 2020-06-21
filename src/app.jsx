@@ -1,8 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ROUTES } from './constants';
-import { Invite, Main, Pricing } from './pages';
 import './styles/index.less';
+import {
+  Invite,
+  Main,
+  Pricing,
+  Login
+} from './pages';
 
 export function App() {
   return (
@@ -19,6 +24,10 @@ export function App() {
       <Route
         path={ROUTES.INVITE}
         component={Invite}
+      />
+      <Route
+        path={ROUTES.LOGIN}
+        component={Login}
       />
     </Switch>
   );

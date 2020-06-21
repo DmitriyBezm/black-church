@@ -15,11 +15,11 @@ export function Invite() {
     <Layout
       className="invite-page"
     >
-      <section className="invite-page__content">
+      <Layout.Wrapper>
         <div className="container">
           <div className="row invite-page__head">
             <div className="column column--align-center column--flex">
-              <Typography.H2 className="invite-page__title">
+              <Typography.H2 className="invite-page__title" second>
                 Invite your Friends by email!
               </Typography.H2>
               <Typography.P className="invite-page__subtitle">
@@ -123,7 +123,7 @@ export function Invite() {
             </Card.Content>
           </Card>
         </div>
-      </section>
+      </Layout.Wrapper>
     </Layout>
   );
 }

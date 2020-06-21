@@ -30,7 +30,7 @@ export function Pricing() {
       </section>
       <section className="pricing-page__plan">
         <div className="container pricing-page__plan-container">
-          <div className="row row--sm row--align-start">
+          <div className="row row--sm row--align-start pricing-page__plan-cost">
             <div className="pricing-page__price-wrap column column--with-offsets column--flex">
               <div className="pricing-page__price">
                 <h1 className="pricing-page__price-title">$50</h1>
