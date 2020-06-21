@@ -25,14 +25,10 @@ export function TryForFree() {
           <div className="column column--with-offsets column--flex">
             <div className="row row--justify-end row--sm try-for-free__buttons">
               <div className="column column--with-offsets try-for-free__button">
-                <Button.Action theme={Button.Theme.WHITE}>
-                  Sign Up Free
-                </Button.Action>
+                <Button.SignUp />
               </div>
               <div className="column column--with-offsets try-for-free__button">
-                <Button>
-                  Log In
-                </Button>
+                <Button.Login />
               </div>
             </div>
           </div>

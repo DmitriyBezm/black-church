@@ -5,14 +5,18 @@ import { TryForFree } from '../try-for-free';
 import { Footer } from '../footer';
 import './styles.less';
 
-export function Layout({ children, className }) {
+export function Layout({
+  children,
+  className,
+  header,
+}) {
   return (
     <div className={classNames({
       [className]: className,
       layout: true,
     })}
     >
-      <Header />
+      {header || <Header />}
       <main className="layout__content">
         {children}
       </main>

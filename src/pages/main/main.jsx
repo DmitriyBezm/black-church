@@ -8,6 +8,7 @@ import {
   Typography,
   Button,
   Feedback,
+  ActionText,
 } from 'components';
 import './styles.less';
 
@@ -130,14 +131,11 @@ export function Main() {
               <img className="main-page__feature-cover" src={mobile} alt="mobile friendly" />
             </div>
             <div className="column column--with-offsets column--flex">
-              <div className="main-page__feature-info-head column column--sm-self-end">
-                <Typography.H2 className="main-page__feature-title">
-                  Beautiful mobile-friendly templates for your black church website
-                </Typography.H2>
-                <Typography.P className="main-page__feature-text">
-                  Start creating your church’s website with a professionally designed template
-                </Typography.P>
-              </div>
+              <ActionText
+                className="main-page__feature-info-head main-page__feature-info-action column column--sm-self-end"
+                title="Beautiful mobile-friendly templates for your black church website"
+                text="Start creating your church’s website with a professionally designed template"
+              />
             </div>
           </div>
           <div className="
@@ -148,18 +146,17 @@ export function Main() {
             "
           >
             <div className="column column--with-offsets column--flex">
-              <div className="column column--self-start">
-                <Typography.H2 className="main-page__feature-title">
-                  Effortlessly embed a live stream on your website
-                </Typography.H2>
-                <Typography.P className="main-page__feature-text">
-                  Black ChMS Sites, embedding a live stream on your website with Facebook,
-                  YouTube, or Vimeo is easy like Sunday morning.
-                </Typography.P>
-                <Button className="main-page__feature-info-button">
-                  Get Started
-                </Button>
-              </div>
+              <ActionText
+                className="
+                  column
+                  column--self-start
+                  main-page__feature-info-video-section
+                  main-page__feature-info-action
+                "
+                title="Effortlessly embed a live stream on your website"
+                text="Black ChMS Sites, embedding a live stream on your website with Facebook, YouTube, or Vimeo is easy like Sunday morning."
+                buttonTitle="Get Started"
+              />
             </div>
             <div className="column column--with-offsets column--flex">
               <img className="main-page__feature-cover" src={video} alt="stream video cover" />

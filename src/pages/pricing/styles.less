@@ -1,0 +1,128 @@
+@import "../../styles/variables";
+
+.pricing-page {
+  &__intro {
+    padding-top: 84px;
+    margin-bottom: 84px;
+    @media (max-width: @screen-md-max) {
+      padding-top: 42px;
+      margin-bottom: 42px;
+    }
+    @media (max-width: @screen-sm-max) {
+      padding-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__intro-text {
+    max-width: 880px;
+  }
+
+  &__price {
+    width: 366px;
+    height: 274px;
+    background-color: @primary;
+    font-family: @font-family-second;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: @screen-md-max) {
+      width: 220px;
+      height: 165px;
+    }
+    @media (max-width: @screen-sm-max) {
+      width: 100%;
+      height: calc(100vw / 2);
+    }
+
+    &-title {
+      font-size: 80px;
+      line-height: 1.1;
+      margin-bottom: 0.25em;
+      color: @primary-accent;
+      font-weight: normal;
+      @media (max-width: @screen-md-max) {
+        font-size: 60px;
+      }
+    }
+
+    &-text {
+      font-size: @heading-6;
+      color: @primary-accent;
+    }
+
+    &-wrap {
+      margin-right: 136px;
+      @media (max-width: @screen-md-max) {
+        margin-right: 30px;
+      }
+      @media (max-width: @screen-sm-max) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__plan {
+    margin-bottom: 100px;
+    @media (max-width: @screen-md-max) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: @screen-sm-max) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &-container {
+      @media (max-width: @screen-sm-max) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+
+  &__options {
+    width: 212px;
+  }
+
+  &__features {
+    margin-bottom: 180px;
+    @media (max-width: @screen-md-max) {
+      margin-bottom: 90px;
+    }
+    @media (max-width: @screen-sm-max) {
+      margin-bottom: 30px;
+    }
+    &-title {
+      margin-bottom: 1em;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-feature {
+      width: 50%;
+      margin-bottom: 70px;
+      @media (max-width: @screen-md-max) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: @screen-sm-max) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: @screen-xs-max) {
+        width: 100%;
+      }
+    }
+    &-options {
+      max-width: 300px;
+      @media (max-width: @screen-md-max) {
+        max-width: 250px;
+      }
+    }
+  }
+}

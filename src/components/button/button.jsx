@@ -1,7 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 import { ActionButton } from './action-button';
 import { IconButton } from './icon-button';
+import { LoginButton } from './login-button';
+import { SignUpButton } from './sign-up-button';
 import './styles.less';
 
 const ButtonTheme = {
@@ -19,12 +22,15 @@ export function Button({
   className,
   onClick,
   size,
+  to,
 }) {
+  const Tag = to ? Link : 'button';
   return (
     // eslint-disable-next-line react/button-has-type
-    <button
+    <Tag
       type={type}
       onClick={onClick}
+      to={to}
       className={
       classNames({
         [className]: className,
@@ -35,7 +41,7 @@ export function Button({
     }
     >
       {children}
-    </button>
+    </Tag>
   );
 }
 
@@ -43,3 +49,5 @@ Button.Theme = ButtonTheme;
 Button.Action = ActionButton;
 Button.Size = ButtonSize;
 Button.Icon = IconButton;
+Button.Login = LoginButton;
+Button.SignUp = SignUpButton;

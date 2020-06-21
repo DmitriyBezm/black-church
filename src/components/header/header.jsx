@@ -1,45 +1,41 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ROUTES } from 'constants';
+import classNames from 'classnames';
 import { Button } from '../button';
 import { MenuIcon } from '../icons';
 import './styles.less';
 
-export function Header() {
+export function Header({ withBorder }) {
   return (
-    <header className="header">
+    <header className={classNames({
+      header: true,
+      'header--with-border': withBorder,
+    })}
+    >
       <div className="header__content container row row--full-height row--justify-between">
         <div className="column row">
-          <a href="/" className="header__logo">
+          <Link to="/" className="header__logo">
             Black ChMS
-          </a>
+          </Link>
           <nav className="header__navigation row">
-            <a href="#" className="link header__link column column--with-offsets">
+            <Link to={ROUTES.PRODUCTS} className="link header__link column column--with-offsets">
               Products
-            </a>
-            <a href="#" className="link header__link column column--with-offsets">
+            </Link>
+            <Link to={ROUTES.PRICING} className="link header__link column column--with-offsets">
               Pricing
-            </a>
-            <a href="#" className="link header__link column column--with-offsets">
+            </Link>
+            <Link to={ROUTES.LEARN} className="link header__link column column--with-offsets">
               Learn
-            </a>
+            </Link>
           </nav>
         </div>
         <div className="row">
           <div className="column column--with-offsets header__sign-buttons">
-            <Button.Action
-              className="header__button"
-              theme={Button.Theme.WHITE}
-              size={Button.Size.SMALL}
-            >
-              Sign Up Free
-            </Button.Action>
+            <Button.SignUp className="header__button" />
           </div>
           <div className="column column--with-offsets header__sign-buttons">
-            <Button
-              className="header__button"
-              size={Button.Size.SMALL}
-            >
-              Log In
-            </Button>
+            <Button.Login className="header__button" />
           </div>
           <Button.Icon className="header__menu-button">
             <MenuIcon className="header__menu-icon" />
