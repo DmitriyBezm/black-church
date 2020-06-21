@@ -8,6 +8,7 @@ import {
   Pricing,
   Login,
   SignUp,
+  Reviews,
 } from './pages';
 
 export function App() {
@@ -33,6 +34,10 @@ export function App() {
       <Route
         path={ROUTES.SIGN_UP}
         component={SignUp}
+      />
+      <Route
+        path={ROUTES.REVIEWS}
+        component={Reviews}
       />
     </Switch>
   );

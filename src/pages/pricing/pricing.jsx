@@ -8,6 +8,7 @@ import {
   Typography,
 } from 'components';
 import './styles.less';
+import { FEEDBACK } from 'constants';
 import { PRICING_OPTIONS_FIRST, PRICING_OPTIONS_LAST, FEATURE_LIST } from './constants';
 
 export function Pricing() {
@@ -72,7 +73,7 @@ export function Pricing() {
       </section>
       <section className="pricing-page__feedback">
         <div className="container">
-          <Feedback />
+          <Feedback actions {...FEEDBACK} />
         </div>
       </section>
     </Layout.Landing>

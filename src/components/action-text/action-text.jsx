@@ -15,9 +15,11 @@ export function ActionText({
       <Typography.H2 className="action-text__title">
         {title}
       </Typography.H2>
-      <Typography.P className="action-text__text">
-        {text}
-      </Typography.P>
+      {text && (
+        <Typography.P className="action-text__text">
+          {text}
+        </Typography.P>
+      )}
       {buttonTitle && (
         <Button
           className="action-text__button"

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 export function createElement(element, {
   tag: Tag = 'div',
   attributes,
-}) {
+} = {}) {
   function Component({
     children,
     className,

@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.reviews-page {
+  &__intro {
+    padding-top: 110px;
+    margin-bottom: 170px;
+
+    @media (max-width: @screen-md-max) {
+      padding-top: 55px;
+      margin-bottom: 85px;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      padding-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      max-width: 364px;
+    }
+  }
+
+  &__feedback {
+    max-width: 900px;
+    margin-bottom: 75px;
+
+    @media (max-width: @screen-md-max) {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__reviews {
+    margin-bottom: 131px;
+
+    @media (max-width: @screen-md-max) {
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      margin-bottom: 30px;
+    }
+  }
+}

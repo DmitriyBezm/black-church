@@ -17,6 +17,7 @@ export function Layout({
   children,
   header,
   footer,
+  additional,
   ...props
 }) {
   return (
@@ -25,6 +26,7 @@ export function Layout({
       <LayoutContent>
         {children}
       </LayoutContent>
+      {additional}
       {footer && (
         <Footer />
       )}

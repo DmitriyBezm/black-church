@@ -10,6 +10,7 @@ import {
   Feedback,
   ActionText,
 } from 'components';
+import { FEEDBACK } from 'constants';
 import './styles.less';
 
 const INSTRUCTION_LIST = [
@@ -166,7 +167,7 @@ export function Main() {
       </section>
       <section className="main-page__feedback">
         <div className="container">
-          <Feedback />
+          <Feedback actions {...FEEDBACK} />
         </div>
       </section>
     </Layout.Landing>
