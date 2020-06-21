@@ -1,15 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Header } from '../header';
+import { TryForFree } from '../try-for-free';
 import { Footer } from '../footer';
-import { Landing } from './landing';
 import './styles.less';
 
-export function Layout({
+export function Landing({
   children,
   className,
   header,
-  footer,
 }) {
   return (
     <div className={classNames({
@@ -21,11 +20,8 @@ export function Layout({
       <main className="layout__content">
         {children}
       </main>
-      {footer && (
-        <Footer />
-      )}
+      <TryForFree />
+      <Footer />
     </div>
   );
 }
-
-Layout.Landing = Landing;

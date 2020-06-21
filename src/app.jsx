@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ROUTES } from './constants';
-import { Main, Pricing } from './pages';
+import { Invite, Main, Pricing } from './pages';
 import './styles/index.less';
 
 export function App() {
@@ -13,9 +13,12 @@ export function App() {
         component={Main}
       />
       <Route
-        exact
         path={ROUTES.PRICING}
         component={Pricing}
+      />
+      <Route
+        path={ROUTES.INVITE}
+        component={Invite}
       />
     </Switch>
   );

@@ -7,3 +7,5 @@ export { TryForFree } from './try-for-free';
 export { Footer } from './footer';
 export { ActionText } from './action-text';
 export { List } from './list';
+export { Input } from './input';
+export { Card } from './card';

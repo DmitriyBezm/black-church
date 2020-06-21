@@ -1,0 +1,101 @@
+@import "../../styles/variables";
+
+.invite-page {
+  background-color: @primary-light;
+
+  &__title {
+    margin-bottom: 0.2em;
+  }
+
+  &__subtitle, &__title {
+    text-align: center;
+  }
+
+  &__content {
+    padding-top: 30px;
+  }
+
+  &__form {
+    width: 100%;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid @grey-light;
+  }
+
+  &__form-inner {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  & &__column {
+    flex: 1 0 50%;
+  }
+
+  &__head {
+    margin-bottom: 34px;
+  }
+
+  &__form-wrap {
+    @media (max-width: @screen-sm-max) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__submit-button {
+    width: 100%;
+  }
+
+  &__email {
+    margin-bottom: 24px;
+  }
+
+  &__invite-title {
+    margin-bottom: 0.8em;
+  }
+
+  &__invite-link {
+    margin-bottom: 30px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &-text {
+      display: block;
+      margin-left: 10px;
+      font-size: @font-size;
+      font-family: @font-family;
+    }
+  }
+
+  &__banner {
+    background-color: @primary;
+
+    &-title {
+      margin-bottom: 0.3em;
+    }
+
+    &-subtitle {
+      margin-bottom: 53px;
+    }
+
+    &-count {
+      font-weight: bold;
+    }
+
+    &-content {
+      align-items: center;
+    }
+  }
+
+  &__invite-image {
+    display: block;
+    width: 100%;
+    max-width: 434px;
+  }
+}

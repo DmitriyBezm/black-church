@@ -1,0 +1,97 @@
+@import "../../styles/variables";
+
+@block: input;
+
+.@{block} {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-top: 12px;
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: @field-inner-offset;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: @white;
+    color: @black;
+    transition: color @duration;
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: @field-height;
+    font-size: @field-font-size;
+    font-family: @font-family;
+    padding: 0 @field-inner-offset;
+    border: 1px solid @field-border-color;
+    border-radius: @field-border-radius;
+    color: @black;
+    transition: border @duration;
+    &::placeholder {
+      font-size: @field-placeholder-size;
+    }
+  }
+
+  &__message {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 16px;
+    font-size: 14px;
+  }
+
+  &--focus {
+    .@{block} {
+      &__field {
+        border: 1px solid @field-focus-color;
+      }
+    }
+  }
+
+  &--readonly {
+    .@{block} {
+      &__field {
+        color: @grey;
+      }
+    }
+  }
+
+  &--warning {
+    .@{block} {
+      &__field {
+        border: 1px solid @field-warning-color;
+      }
+      &__message, &__label {
+        color: @field-warning-color;
+      }
+    }
+  }
+
+  &--error {
+    .@{block} {
+      &__field {
+        border: 1px solid @field-error-color;
+      }
+      &__message, &__label {
+        color: @field-error-color;
+      }
+    }
+  }
+
+  &--disabled {
+    .@{block} {
+      &__field, &__label {
+        color: @grey;
+        background-color: @white;
+      }
+
+      &__field {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

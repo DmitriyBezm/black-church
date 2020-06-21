@@ -5,4 +5,5 @@ export const ROUTES = {
   LEARN: '/learn',
   SIGN_UP: '/sign-up',
   LOGIN: '/login',
+  INVITE: '/invite',
 };

@@ -5,3 +5,6 @@ export { MountsIcon } from './mounts';
 export { MenuIcon } from './menu';
 export { CrossIcon } from './cross';
 export { CheckIcon } from './check';
+export { CopyIcon } from './copy';
+export { TwitterIcon } from './twitter';
+export { FacebookIcon } from './facebook';

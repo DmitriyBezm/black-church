@@ -12,7 +12,7 @@ import { PRICING_OPTIONS_FIRST, PRICING_OPTIONS_LAST, FEATURE_LIST } from './con
 
 export function Pricing() {
   return (
-    <Layout
+    <Layout.Landing
       className="pricing-page"
       header={(
         <Header withBorder />
@@ -75,6 +75,6 @@ export function Pricing() {
           <Feedback />
         </div>
       </section>
-    </Layout>
+    </Layout.Landing>
   );
 }

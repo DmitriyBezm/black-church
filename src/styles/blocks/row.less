@@ -29,7 +29,7 @@
     align-items: flex-start;
   }
 
-  &--sm {
+  &--sm, &--sm-reverse {
     @media (max-width: @screen-sm-max) {
       flex-direction: column;
       & > .column--with-offsets {
@@ -41,6 +41,12 @@
           margin-right: 0;
         }
       }
+    }
+  }
+
+  &--sm-reverse {
+    @media (max-width: @screen-sm-max) {
+      flex-direction: column-reverse;
     }
   }
 }

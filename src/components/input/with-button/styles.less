@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+
+@block: input-with-button;
+
+.@{block} {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: @field-height;
+    width: @field-height;
+    background-color: @black;
+    border: none;
+    margin-top: 12px;
+    border-bottom-right-radius: @field-border-radius;
+    border-top-right-radius: @field-border-radius;
+    cursor: pointer;
+    transition: background-color;
+    transition-duration: @duration;
+
+    &:hover {
+      background-color: rgba(@black, 0.7);
+    }
+
+    &-icon {
+      path {
+        stroke: @white;
+      }
+    }
+  }
+
+  &__field {
+    & input {
+      border-right: 0 solid transparent;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}

@@ -46,7 +46,7 @@ const INSTRUCTION_LIST = [
 
 export function Main() {
   return (
-    <Layout className="main-page">
+    <Layout.Landing className="main-page">
       <section className="main-page__intro">
         <div className="main-page__intro-row container row row--full-height row--sm">
           <div className="main-page__intro-text column column--flex column--with-offsets">
@@ -169,6 +169,6 @@ export function Main() {
           <Feedback />
         </div>
       </section>
-    </Layout>
+    </Layout.Landing>
   );
 }

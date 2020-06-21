@@ -6,6 +6,10 @@
 @primary-accent: #7B4849;
 @brown: #615757;
 @grey: #C8C4C4;
+@grey-light: #F2F2F2;
+@red: #9D1C21;
+@yellow: #F5BC57;
+@shadow-color: #ad5b49;
 
 /** Fonts **/
 /* weights */
@@ -76,7 +80,7 @@
 @button-primary: @black;
 @button-radius: 50px;
 @button-hor-padding: 30px;
-@button-shadow: 0px 4px 20px rgba(173, 92, 73, 0.1);
+@button-shadow: 0px 4px 20px rgba(@shadow-color, 0.1);
 
 /** Header **/
 @header-height: 98px;
@@ -84,3 +88,16 @@
 
 /** Images **/
 @image-background-color: @grey;
+
+/** Forms **/
+@form-shadow: 0px 4px 20px rgba(@shadow-color, 0.1);
+@field-height: 60px;
+@field-font-size: @font-size;
+@field-inner-offset: 40px;
+@field-border-radius: 12px;
+@field-placeholder-size: @font-size;
+
+@field-border-color: @grey;
+@field-error-color: @red;
+@field-warning-color: @yellow;
+@field-focus-color: @primary-accent;
