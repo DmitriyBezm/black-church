@@ -9,6 +9,7 @@ import {
   Login,
   SignUp,
   Reviews,
+  Help,
 } from './pages';
 
 export function App() {
@@ -38,6 +39,10 @@ export function App() {
       <Route
         path={ROUTES.REVIEWS}
         component={Reviews}
+      />
+      <Route
+        path={ROUTES.HELP}
+        component={Help}
       />
     </Switch>
   );

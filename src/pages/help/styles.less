@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.help-page {
+  &__wrapper {
+    justify-content: center;
+  }
+  &__title {
+    margin-bottom: 0.4em;
+  }
+  &__subtitle {
+    margin-bottom: 1em;
+  }
+  &__button {
+    margin-bottom: 92px;
+    @media (max-width: @screen-md-max) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      margin-bottom: 25px;
+    }
+  }
+  &__action {
+    @media (max-width: @screen-sm-max) {
+      margin-bottom: 16px;
+    }
+  }
+}

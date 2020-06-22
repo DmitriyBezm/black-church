@@ -29,9 +29,9 @@
     overflow: hidden;
 
     @media (max-width: @screen-sm-max) {
-      flex: 0 0 100px;
-      height: 100px;
-      width: 100px;
+      flex: 0 0 60px;
+      height: 60px;
+      width: 60px;
       margin-right: 0;
       margin-bottom: 20px;
     }
@@ -51,11 +51,8 @@
   }
 
   &__message {
-    margin-bottom: 1.4em;
-
     @media (max-width: @screen-sm-max) {
       font-size: 14px;
-      margin-bottom: 2em;
     }
   }
 
@@ -65,5 +62,13 @@
 
   &__button {
     margin-bottom: 20px;
+  }
+
+  &__buttons {
+    margin-top: 1.4em;
+
+    @media (max-width: @screen-sm-max) {
+      margin-top: 28px;
+    }
   }
 }

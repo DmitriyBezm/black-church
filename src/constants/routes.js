@@ -7,4 +7,7 @@ export const ROUTES = {
   LOGIN: '/login',
   INVITE: '/invite',
   REVIEWS: '/reviews',
+  HELP: '/help',
+  FAQ: '/faq',
+  SUPPORT: '/support',
 };

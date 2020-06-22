@@ -33,7 +33,7 @@ export function FeedbackContent({
           {message}
         </Typography.P>
         {actions && (
-        <div className="row row--sm">
+        <div className="row row--sm feedback__buttons">
           <div className="column column--with-offsets">
             <Button className="feedback__button">
               See more reviews
