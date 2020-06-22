@@ -10,3 +10,5 @@ export { TwitterIcon } from './twitter';
 export { FacebookIcon } from './facebook';
 export { BinIcon } from './bin';
 export { EyeIcon } from './eye';
+export { CheckboxEmptyIcon } from './checkbox-empty';
+export { CheckboxIcon } from './checkbox';

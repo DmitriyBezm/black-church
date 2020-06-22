@@ -48,12 +48,14 @@ export const SUBSCRIBERS = {
       id: 'progress',
       Header: 'Actions',
       accessor: 'actions',
-      Cell: () => (
-        <Table.Buttons
-          selected
-          onSelect={() => {}}
-        />
-      ),
+      Cell: ({ row: { index } }) => {
+        return (
+          <Table.Buttons
+            selected={index % 2 === 0}
+            onSelect={() => {}}
+          />
+        )
+      },
     },
   ],
 };

@@ -6,8 +6,6 @@ import {
   Input,
   Card,
 } from 'components';
-import { Link } from 'react-router-dom';
-import { ROUTES } from 'constants';
 import './styles.less';
 
 export function Account() {
@@ -34,7 +32,7 @@ export function Account() {
                   />
                 </div>
                 <div className="column column--col-2">
-                  <Input
+                  <Input.Select
                     className="account-page__row"
                     label="Subscription Type"
                     placeholder="Select Subscription"

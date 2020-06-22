@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import { WithButton } from './with-button';
 import { Clipboard } from './clipboard';
+import { Select } from './select';
 import './styles.less';
 
 export function Input({
@@ -70,3 +71,4 @@ export function Input({
 
 Input.WithButton = WithButton;
 Input.Clipboard = Clipboard;
+Input.Select = Select;

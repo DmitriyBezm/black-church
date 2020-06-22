@@ -1,5 +1,10 @@
 import React from 'react';
-import { BinIcon, EyeIcon } from 'components/icons';
+import {
+  BinIcon,
+  EyeIcon,
+  CheckboxEmptyIcon,
+  CheckboxIcon,
+} from 'components/icons';
 import { Button } from 'components';
 
 export function ActionButtons({
@@ -26,8 +31,14 @@ export function ActionButtons({
       )}
       {onSelect && (
         <div className="column column--with-offsets">
-          <Button.Icon onClick={onDelete}>
-            <BinIcon />
+          <Button.Icon onClick={onSelect}>
+            {selected
+              ? (
+                <CheckboxIcon className="table__checkbox-icon" />
+              )
+              : (
+                <CheckboxEmptyIcon className="table__checkbox-icon" />
+              )}
           </Button.Icon>
         </div>
       )}
