@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.products-page {
+  &__intro {
+    padding-top: 84px;
+    margin-bottom: 70px;
+  }
+
+  &__products {
+    margin-bottom: 120px;
+    @media (max-width: @screen-md-max) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: @screen-sm-max) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__preview {
+    flex: 1 1 45%;
+    margin-bottom: 46px;
+    @media (max-width: @screen-sm-max) {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+  }
+}

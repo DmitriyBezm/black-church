@@ -3,8 +3,6 @@ import {
   Layout,
   Header,
   ActionText,
-  List,
-  Typography,
   Feedback,
 } from 'components';
 import { FEEDBACK_LIST } from 'constants';

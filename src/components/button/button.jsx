@@ -9,10 +9,12 @@ import './styles.less';
 
 const ButtonTheme = {
   WHITE: 'white',
+  OUTLINE: 'outline',
 };
 
 const ButtonSize = {
   SMALL: 'small',
+  EXTRA_SMALL: 'extra-small',
 };
 
 export function Button({
@@ -23,6 +25,7 @@ export function Button({
   onClick,
   size,
   to,
+  target,
 }) {
   const Tag = to ? Link : 'button';
   return (
@@ -31,11 +34,13 @@ export function Button({
       type={type}
       onClick={onClick}
       to={to}
+      target={target}
       className={
       classNames({
         [className]: className,
         button: true,
         'button--white': theme === ButtonTheme.WHITE,
+        'button--outline': theme === ButtonTheme.OUTLINE,
         [`button--${size}`]: size,
       })
     }

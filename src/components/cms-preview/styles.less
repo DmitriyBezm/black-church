@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+
+@block: cms-preview;
+@offset: 50px;
+
+.@{block} {
+  background-color: @coffee-color;
+
+  &__cover {
+    position: relative;
+    height: 428px;
+    padding: @offset @offset 0;
+  }
+
+  &__name {
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+    background-color: @white;
+  }
+  &__title {
+    margin-bottom: 0.4em;
+  }
+  &__image {
+    position: absolute;
+    width: calc(100% - 2 * @offset);
+    top: @offset;
+    left: @offset;
+    right: @offset;
+  }
+
+  &--theme-red {
+    background-color: @red;
+  }
+
+  &--theme-turquoise {
+    background-color: @turquoise;
+  }
+
+  &--theme-blue {
+    background-color: @blue;
+  }
+
+  &--theme-yellow {
+    background-color: @yellow;
+  }
+
+  &--theme-violet {
+    background-color:  @violet;
+  }
+}

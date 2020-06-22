@@ -42,6 +42,16 @@
     }
   }
 
+  &--outline {
+    border: 1px solid @black;
+    background: @white;
+    color: @black;
+
+    &:hover {
+      background-color: rgba(@black, 0.05);
+    }
+  }
+
   &--small {
     height: @button-height;
     min-width: @button-width;
@@ -50,5 +60,10 @@
       height: @button-height * 0.8;
       min-width: @button-width * 0.8;
     }
+  }
+
+  &--extra-small {
+    height: @button-xs-height;
+    min-width: @button-xs-width;
   }
 }

@@ -10,6 +10,8 @@ import {
   SignUp,
   Reviews,
   Help,
+  Products,
+  Product,
 } from './pages';
 
 export function App() {
@@ -43,6 +45,15 @@ export function App() {
       <Route
         path={ROUTES.HELP}
         component={Help}
+      />
+      <Route
+        exact
+        path={ROUTES.PRODUCTS}
+        component={Products}
+      />
+      <Route
+        path={`${ROUTES.PRODUCTS}/:id`}
+        component={Product}
       />
     </Switch>
   );
