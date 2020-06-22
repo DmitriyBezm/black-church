@@ -12,6 +12,7 @@ import {
   Help,
   Products,
   Product,
+  Account,
   Payment,
   Dashboard,
 } from './pages';
@@ -47,6 +48,10 @@ export function App() {
       <Route
         path={ROUTES.HELP}
         component={Help}
+      />
+      <Route
+        path={ROUTES.ACCOUNT}
+        component={Account}
       />
       <Route
         exact

@@ -19,7 +19,6 @@ const VIEWS = [
     previewSrc: loveWorld,
     link: CMS_IMAGE_IDS.LOVE_WORLD,
     title: 'Love World',
-    theme: CmsPreview.Theme.RED,
     to: 'love-world',
   },
   {

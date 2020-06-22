@@ -7,5 +7,6 @@ export { Reviews } from './reviews';
 export { Help } from './help';
 export { Products } from './products';
 export { Product } from './product';
+export { Account } from './account';
 export { Payment } from './payment';
 export { Dashboard } from './dashboard';
