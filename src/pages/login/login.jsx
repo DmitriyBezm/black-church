@@ -5,6 +5,7 @@ import {
   Button,
   Input,
   Card,
+  Header,
 } from 'components';
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'constants';
@@ -16,6 +17,9 @@ export function Login() {
     <Layout
       className="login-page"
       theme={Layout.Theme.BG_PRIMARY_LIGHT}
+      header={(
+        <Header authorized={false} />
+      )}
     >
       <Layout.Wrapper>
         <div className="container container--small">

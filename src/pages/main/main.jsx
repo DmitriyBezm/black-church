@@ -9,6 +9,7 @@ import {
   Button,
   Feedback,
   ActionText,
+  Header,
 } from 'components';
 import { FEEDBACK } from 'constants';
 import './styles.less';
@@ -47,7 +48,12 @@ const INSTRUCTION_LIST = [
 
 export function Main() {
   return (
-    <Layout.Landing className="main-page">
+    <Layout.Landing
+      className="main-page"
+      header={(
+        <Header authorized={false} />
+      )}
+    >
       <section className="main-page__intro">
         <div className="main-page__intro-row container row row--full-height row--sm">
           <div className="main-page__intro-text column column--flex column--with-offsets">

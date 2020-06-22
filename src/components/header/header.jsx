@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from 'constants';
 import classNames from 'classnames';
 import { Button } from '../button';
-import { MenuIcon } from '../icons';
+import { Menu } from '../menu';
 import './styles.less';
 
-export function Header({ withBorder }) {
+export function Header({ withBorder, authorized = true }) {
   return (
     <header className={classNames({
       header: true,
@@ -31,15 +31,33 @@ export function Header({ withBorder }) {
           </nav>
         </div>
         <div className="row">
-          <div className="column column--with-offsets header__sign-buttons">
-            <Button.SignUp className="header__button" />
+          {authorized
+            ? (
+              <React.Fragment>
+                <div className="column column--with-offsets header__sign-buttons">
+                  <Button.Action theme={Button.Theme.TEXT}>
+                    Log Out
+                  </Button.Action>
+                </div>
+                <div className="column column--with-offsets header__sign-buttons">
+                  <Menu />
+                </div>
+              </React.Fragment>
+            )
+            : (
+              <React.Fragment>
+                <div className="column column--with-offsets header__sign-buttons">
+                  <Button.SignUp className="header__button" />
+                </div>
+                <div className="column column--with-offsets header__sign-buttons">
+                  <Button.Login className="header__button" />
+                </div>
+              </React.Fragment>
+            )
+          }
+          <div className="header__menu-button">
+            <Menu />
           </div>
-          <div className="column column--with-offsets header__sign-buttons">
-            <Button.Login className="header__button" />
-          </div>
-          <Button.Icon className="header__menu-button">
-            <MenuIcon className="header__menu-icon" />
-          </Button.Icon>
         </div>
       </div>
     </header>

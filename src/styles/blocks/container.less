@@ -24,7 +24,7 @@
   }
 
   // 576px
-  @media (max-width: @screen-xs-max) {
+  @media (max-width: @screen-sm-max) {
     padding-left: @container-sm-offsets;
     padding-right: @container-sm-offsets;
   }
@@ -33,8 +33,6 @@
     width: 100%;
     max-width: 867px;
     padding: 0;
-    //margin-left: -@container-xl-offsets;
-    //margin-right: -@container-xl-offsets;
     box-sizing: border-box;
 
     @media (max-width: @screen-md-max) {
@@ -44,6 +42,8 @@
     @media (max-width: @screen-sm-max) {
       margin-left: 0;
       margin-right: 0;
+      padding-left: @container-sm-offsets;
+      padding-right: @container-sm-offsets;
     }
   }
 }

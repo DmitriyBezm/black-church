@@ -49,7 +49,7 @@ export function Products() {
     <Layout.Landing
       className="products-page"
       header={(
-        <Header withBorder />
+        <Header withBorder authorized />
       )}
     >
       <section className="products-page__intro">

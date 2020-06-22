@@ -5,6 +5,7 @@ import {
   Button,
   Input,
   Card,
+  Header
 } from 'components';
 import './styles.less';
 
@@ -13,6 +14,9 @@ export function SignUp() {
     <Layout
       className="sign-up-page"
       theme={Layout.Theme.BG_PRIMARY_LIGHT}
+      header={(
+        <Header authorized={false} />
+      )}
     >
       <Layout.Wrapper>
         <div className="container container--small">

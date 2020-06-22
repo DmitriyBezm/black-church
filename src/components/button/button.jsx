@@ -10,6 +10,7 @@ import './styles.less';
 const ButtonTheme = {
   WHITE: 'white',
   OUTLINE: 'outline',
+  TEXT: 'text',
 };
 
 const ButtonSize = {
@@ -22,12 +23,22 @@ export function Button({
   theme,
   type = 'text',
   className,
+  tag,
   onClick,
   size,
   to,
   target,
 }) {
-  const Tag = to ? Link : 'button';
+  let Tag = 'button';
+
+  if (tag) {
+    Tag = tag;
+  }
+
+  if (to) {
+    Tag = Link;
+  }
+
   return (
     // eslint-disable-next-line react/button-has-type
     <Tag
@@ -41,6 +52,7 @@ export function Button({
         button: true,
         'button--white': theme === ButtonTheme.WHITE,
         'button--outline': theme === ButtonTheme.OUTLINE,
+        'button--text': theme === ButtonTheme.TEXT,
         [`button--${size}`]: size,
       })
     }

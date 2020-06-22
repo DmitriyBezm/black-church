@@ -9,7 +9,6 @@ export const ROUTES = {
   REVIEWS: '/reviews',
   HELP: '/help',
   FAQ: '/faq',
-  SUPPORT: '/support',
   ACCOUNT: '/account',
   PAYMENT: '/payment',
   DASHBOARD: '/dashboard',
