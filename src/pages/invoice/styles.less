@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.invoices-page {
+  &__default-column {
+    color: @green;
+    path {
+      fill: @green
+    }
+  }
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  &__row {
+    margin-bottom: 40px;
+    @media (max-width: @screen-sm-max) {
+      margin-bottom: 20px;
+    }
+  }
+  &__buttons {
+    margin-top: 60px;
+  }
+}

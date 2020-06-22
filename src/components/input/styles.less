@@ -33,7 +33,20 @@
     transition: border @duration;
     &::placeholder {
       font-size: @field-placeholder-size;
+      color: @grey;
     }
+
+    &--fake {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__placeholder {
+    display: flex;
+    align-items: center;
+    font-size: @field-placeholder-size;
+    color: @grey;
   }
 
   &__message {
@@ -92,6 +105,15 @@
       &__field {
         cursor: not-allowed;
       }
+    }
+  }
+
+  &--hidden {
+    input.@{block}__field {
+      //display: none;
+      border: none;
+      width: 0px;
+      height: 0px;
     }
   }
 }

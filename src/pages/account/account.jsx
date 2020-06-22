@@ -8,6 +8,12 @@ import {
 } from 'components';
 import './styles.less';
 
+const options = [
+  { value: 'Abe', label: 'Abe', customAbbreviation: 'A' },
+  { value: 'John', label: 'John', customAbbreviation: 'J' },
+  { value: 'Dustin', label: 'Dustin', customAbbreviation: 'D' },
+];
+
 export function Account() {
   return (
     <Layout
@@ -36,6 +42,7 @@ export function Account() {
                     className="account-page__row"
                     label="Subscription Type"
                     placeholder="Select Subscription"
+                    options={options}
                   />
                 </div>
               </div>

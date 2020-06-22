@@ -15,6 +15,7 @@ import {
   Account,
   Payment,
   Dashboard,
+  Invoice,
 } from './pages';
 
 export function App() {
@@ -69,6 +70,10 @@ export function App() {
       <Route
         path={ROUTES.DASHBOARD}
         component={Dashboard}
+      />
+      <Route
+        path={ROUTES.INVOICES}
+        component={Invoice}
       />
     </Switch>
   );

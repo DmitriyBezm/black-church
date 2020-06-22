@@ -10,3 +10,4 @@ export { Product } from './product';
 export { Account } from './account';
 export { Payment } from './payment';
 export { Dashboard } from './dashboard';
+export { Invoice } from './invoice';

@@ -13,4 +13,5 @@ export const ROUTES = {
   ACCOUNT: '/account',
   PAYMENT: '/payment',
   DASHBOARD: '/dashboard',
+  INVOICES: '/invoices',
 };

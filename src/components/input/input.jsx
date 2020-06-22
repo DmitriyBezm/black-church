@@ -19,7 +19,7 @@ export function Input({
   warning,
   disabled,
   readonly,
-  ...rest
+  fake
 }) {
   const message = warning || error;
   const [focused, setFocus] = useState(false);
@@ -39,28 +39,43 @@ export function Input({
   };
 
   return (
-    <label className={classNames({
-      [className]: className,
-      input: true,
-      'input--focus': focused,
-      'input--error': error,
-      'input--warning': warning,
-      'input--disabled': disabled,
-      'input--readonly': readonly,
-    })}
+    <label
+      className={classNames({
+        [className]: className,
+        input: true,
+        'input--focus': focused,
+        'input--error': error,
+        'input--warning': warning,
+        'input--disabled': disabled,
+        'input--readonly': readonly,
+        'input--hidden': fake,
+      })}
     >
       <span className="input__label">{label || placeholder || name}</span>
+      {fake && !value && (
+        <div
+          className="input__field input__placeholder"
+        >
+          {placeholder}
+        </div>
+      )}
+      {fake && value && (
+        <div
+          className="input__field input__field--fake"
+        >
+          {value}
+        </div>
+      )}
       <input
         className="input__field"
         type={type}
         value={value}
-        onChange={onChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
         name={name}
         placeholder={placeholder}
         disabled={disabled}
-        {...rest}
+        onChange={onChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
       />
       {message && (
         <span className="input__message">{message}</span>
