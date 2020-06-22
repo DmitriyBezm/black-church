@@ -1,0 +1,44 @@
+@import "../../../styles/variables";
+
+@block: card-with-tabs;
+
+.@{block} {
+  display: flex;
+  flex-direction: column;
+  min-height: 810px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid @grey-light;
+  }
+
+  &__footer {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    border-top: 1px solid @grey-light;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    height: 53px;
+    border-right: 1px solid @grey-light;
+    cursor: pointer;
+    &:last-child {
+      border-right: none;
+    }
+    &--active {
+      background-color: @primary;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: auto;
+  }
+}

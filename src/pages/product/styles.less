@@ -1,6 +1,12 @@
 @import "../../styles/variables";
 
 .product-page {
+  &__intro {
+    padding: 60px 0;
+    @media (max-width: @screen-sm-max) {
+      padding: 30px 0;
+    }
+  }
   &__img {
     width: 100%;
     display: block;

@@ -12,6 +12,8 @@ import {
   Help,
   Products,
   Product,
+  Payment,
+  Dashboard,
 } from './pages';
 
 export function App() {
@@ -54,6 +56,14 @@ export function App() {
       <Route
         path={`${ROUTES.PRODUCTS}/:id`}
         component={Product}
+      />
+      <Route
+        path={ROUTES.PAYMENT}
+        component={Payment}
+      />
+      <Route
+        path={ROUTES.DASHBOARD}
+        component={Dashboard}
       />
     </Switch>
   );

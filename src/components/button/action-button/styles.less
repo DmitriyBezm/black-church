@@ -1,8 +1,25 @@
 @import "../../../styles/variables";
 
+@block: action-button;
+
 .action-button {
   &__text {
     font-size: @font-size;
     margin-right: 16px;
+  }
+
+  &--reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    .@{block} {
+      &__text {
+        margin-right: 0;
+        margin-left: 16px;
+      }
+
+      &__icon {
+        transform: rotate(180deg);
+      }
+    }
   }
 }

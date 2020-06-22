@@ -8,3 +8,5 @@ export { CheckIcon } from './check';
 export { CopyIcon } from './copy';
 export { TwitterIcon } from './twitter';
 export { FacebookIcon } from './facebook';
+export { BinIcon } from './bin';
+export { EyeIcon } from './eye';

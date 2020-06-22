@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { CardContent } from './card-content';
+import { CardWithTabs } from './with-tabs';
 import './styles.less';
 
 export function Card({ children, className }) {
@@ -16,3 +17,4 @@ export function Card({ children, className }) {
 }
 
 Card.Content = CardContent;
+Card.WithTabs = CardWithTabs;

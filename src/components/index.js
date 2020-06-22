@@ -10,3 +10,4 @@ export { List } from './list';
 export { Input } from './input';
 export { Card } from './card';
 export { CmsPreview } from './cms-preview';
+export { Table } from './table';

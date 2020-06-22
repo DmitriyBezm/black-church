@@ -7,6 +7,7 @@ import './styles.less';
 export function ActionButton({
   children,
   className,
+  reverse,
   ...props
 }) {
   return (
@@ -16,6 +17,7 @@ export function ActionButton({
         classNames({
           [className]: className,
           'action-button': true,
+          'action-button--reverse': reverse,
         })
       }
     >
