@@ -19,27 +19,36 @@
     transition: color @duration;
   }
 
-  &__field {
+  &__label-node {
     display: block;
     width: 100%;
-    box-sizing: border-box;
+  }
+
+  &__input-node {
+    padding: 0;
+    border: none;
+    background-color: transparent;
     height: @field-height;
-    font-size: @field-font-size;
-    font-family: @font-family;
-    padding: 0 @field-inner-offset;
-    border: 1px solid @field-border-color;
-    border-radius: @field-border-radius;
-    color: @black;
-    transition: border @duration;
     &::placeholder {
       font-size: @field-placeholder-size;
       color: @grey;
     }
+  }
 
-    &--fake {
-      display: flex;
-      align-items: center;
-    }
+  &__input-node, &__field {
+    width: 100%;
+    font-size: @field-font-size;
+    font-family: @font-family;
+    color: @black;
+    box-sizing: border-box;
+  }
+
+  &__field {
+    padding: 0 @field-inner-offset;
+    display: block;
+    border: 1px solid @field-border-color;
+    border-radius: @field-border-radius;
+    transition: border @duration;
   }
 
   &__placeholder {
@@ -110,7 +119,6 @@
 
   &--hidden {
     input.@{block}__field {
-      //display: none;
       border: none;
       width: 0px;
       height: 0px;

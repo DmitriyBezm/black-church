@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
 import { ROUTES } from 'constants';
-import ReactSelect, { components } from 'react-select';
 import { useHistory } from 'react-router-dom';
-import { InputContainer } from './input-container';
+import { Input } from '../input';
+import { Button } from '../button';
 import './styles.less';
-
-const controlStyles = () => ({
-  display: 'flex',
-  width: '100%',
-});
-
-const containerStyles = () => ({ width: '100%' });
 
 const OPTIONS = [
   {
@@ -62,59 +54,30 @@ const OPTIONS = [
 
 export function Menu() {
   const [selected, choose] = useState(OPTIONS[0]);
+
   const history = useHistory();
+
   const handleChange = (event) => {
     choose(event);
-    history.push(event.value)
+    history.push(event.value);
   };
 
   return (
-    <ReactSelect
-      options={OPTIONS}
-      isSearchable={false}
-      value={selected}
+    <Input.Select
       onChange={handleChange}
-      components={{
-        Control: ({ getStyles, children, ...values }) => (
-          <components.Control
-            getStyles={controlStyles}
-            {...values}
+      value={[selected]}
+      options={OPTIONS}
+      control={({ children }) => (
+        (
+          <Button
+            className="menu"
+            tag="div"
+            theme={Button.Theme.WHITE}
           >
-            {children[0]}
-          </components.Control>
-        ),
-        ValueContainer: ({
-          getStyles,
-          children,
-          getValue,
-          ...values
-        }) => {
-          const [, defaultInput] = children;
-          const { props: childProps } = defaultInput;
-          const [selected = {}] = getValue();
-          const { selectProps: { menuIsOpen } } = values;
-          return (
-            <components.ValueContainer
-              {...values}
-              getStyles={containerStyles}
-            >
-              <div className={
-                classNames({
-                  menu: true,
-                  'menu--open': menuIsOpen,
-                })
-              }
-              >
-                <InputContainer
-                  {...childProps}
-                  value={selected.label || ''}
-                  fake
-                />
-              </div>
-            </components.ValueContainer>
-          );
-        },
-      }}
+            {children}
+          </Button>
+        )
+      )}
     />
   );
 }

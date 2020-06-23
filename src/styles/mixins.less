@@ -11,6 +11,7 @@
 .font-sizes(@heading) {
   font-size: @heading;
   .media-if(0.85 * @heading, @screen-lg-max);  // 992
-  .media-if(0.75 * @heading, @screen-md-max); // 768px
-  .media-if(0.5 * @heading, @screen-sm-max);  // 576
+  .media-if(0.80 * @heading, @screen-md-max); // 768px
+  //.media-if(0.70 * @heading, @screen-sm-max); // 768px
+  .media-if(0.7 * @heading, @screen-xs-max);  // 576
 }

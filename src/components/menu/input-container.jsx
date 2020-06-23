@@ -2,25 +2,16 @@ import React from 'react';
 import { Button } from '../button';
 
 export function InputContainer({
-  onClick,
   value,
   onBlur,
   onFocus,
   onChange,
   disabled,
+  onClick,
 }) {
   return (
     <label className="menu__label">
-      <Button
-        className="menu__button"
-        tag="span"
-        theme={Button.Theme.WHITE}
-        size={Button.Size.SMALL}
-      >
-        {value}
-      </Button>
       <input
-        onClick={onClick}
         className="menu__input"
         disabled={disabled}
         onChange={onChange}
@@ -28,6 +19,14 @@ export function InputContainer({
         onFocus={onFocus}
         value={value}
       />
+      <Button
+        onClick={onClick}
+        className="menu__button"
+        theme={Button.Theme.WHITE}
+        size={Button.Size.SMALL}
+      >
+        {value}
+      </Button>
     </label>
   );
 }

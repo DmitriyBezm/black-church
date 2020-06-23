@@ -5,25 +5,30 @@
 .@{block} {
   width: 100%;
   position: relative;
-  &::after {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    width: 0;
-    height: 0;
-    margin-top: 3px;
-    border-top: 7px solid @black;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    transform-origin: center 3px;
-    content: '';
+  padding-right: 0;
+  & &__control, & &__control:hover {
+    box-shadow: none;
+    border-color: transparent;
+    min-height: @field-height;
   }
 
-  &--open {
-    &:after {
-      transform: rotate(180deg);
-    }
+  & &__control {
+    width: 100%;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  & &__value-container {
+    padding: 0;
+  }
+
+  & &__wrap .input__field {
+    padding-right: 0;
+  }
+
+  & &__indicator-container {
+    padding-right: 20px;
+    padding-left: 10px;
   }
 }

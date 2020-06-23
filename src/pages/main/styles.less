@@ -15,6 +15,10 @@
     &-text {
       position: relative;
       z-index: 1;
+      @media (max-width: @screen-sm-max) {
+        flex: 1 1 65px;
+        height: calc(100vh - @header-sm-height);
+      }
     }
   }
 

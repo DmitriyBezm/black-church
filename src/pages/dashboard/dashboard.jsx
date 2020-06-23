@@ -33,15 +33,30 @@ export function Dashboard() {
               ),
             }}
             footer={(
-              <div className="row row--justify-center">
+              <div className="row row--sm row--justify-center">
                 <div className="column column--with-offsets">
-                  <Button theme={Button.Theme.WHITE}>Lorem Ipsum</Button>
+                  <Button
+                    theme={Button.Theme.WHITE}
+                    className="dashboard-page__button"
+                  >
+                    Lorem Ipsum
+                  </Button>
                 </div>
                 <div className="column column--with-offsets">
-                  <Button theme={Button.Theme.WHITE}>Lorem Ipsum</Button>
+                  <Button
+                    theme={Button.Theme.WHITE}
+                    className="dashboard-page__button"
+                  >
+                    Lorem Ipsum
+                  </Button>
                 </div>
                 <div className="column column--with-offsets">
-                  <Button theme={Button.Theme.WHITE}>Church details</Button>
+                  <Button
+                    theme={Button.Theme.WHITE}
+                    className="dashboard-page__button"
+                  >
+                    Church details
+                  </Button>
                 </div>
               </div>
             )}

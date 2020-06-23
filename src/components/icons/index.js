@@ -12,3 +12,4 @@ export { BinIcon } from './bin';
 export { EyeIcon } from './eye';
 export { CheckboxEmptyIcon } from './checkbox-empty';
 export { CheckboxIcon } from './checkbox';
+export { TriangleIcon } from './triangle';

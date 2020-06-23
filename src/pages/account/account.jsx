@@ -62,7 +62,6 @@ export function Account() {
                     className="account-page__row"
                     label="Next payment Date"
                     placeholder="Enter Payment Date"
-                    type="date"
                   />
                 </div>
                 <div className="column column--col-2">

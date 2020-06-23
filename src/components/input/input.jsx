@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
 import { WithButton } from './with-button';
 import { Clipboard } from './clipboard';
 import { Select } from './select';
+import { InputWrap } from './input-wrap';
 import './styles.less';
 
 export function Input({
@@ -19,7 +19,7 @@ export function Input({
   warning,
   disabled,
   readonly,
-  fake
+  isFocused,
 }) {
   const message = warning || error;
   const [focused, setFocus] = useState(false);
@@ -39,51 +39,36 @@ export function Input({
   };
 
   return (
-    <label
-      className={classNames({
-        [className]: className,
-        input: true,
-        'input--focus': focused,
-        'input--error': error,
-        'input--warning': warning,
-        'input--disabled': disabled,
-        'input--readonly': readonly,
-        'input--hidden': fake,
-      })}
+    <InputWrap
+      className={className}
+      error={error}
+      warning={warning}
+      disabled={disabled}
+      readonly={readonly}
+      focused={isFocused || focused}
+      label={label}
     >
-      <span className="input__label">{label || placeholder || name}</span>
-      {fake && !value && (
-        <div
-          className="input__field input__placeholder"
-        >
-          {placeholder}
-        </div>
-      )}
-      {fake && value && (
-        <div
-          className="input__field input__field--fake"
-        >
-          {value}
-        </div>
-      )}
-      <input
-        className="input__field"
-        type={type}
-        value={value}
-        name={name}
-        placeholder={placeholder}
-        disabled={disabled}
-        onChange={onChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-      />
-      {message && (
-        <span className="input__message">{message}</span>
-      )}
-    </label>
+      <label className="input__label-node">
+        <input
+          className="input__input-node"
+          type={type}
+          value={value}
+          name={name}
+          placeholder={placeholder}
+          disabled={disabled}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+        {message && (
+          <span className="input__message">{message}</span>
+        )}
+      </label>
+    </InputWrap>
   );
 }
 
 Input.WithButton = WithButton;
 Input.Clipboard = Clipboard;
 Input.Select = Select;
+Input.Wrap = InputWrap;
