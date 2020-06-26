@@ -11,6 +11,8 @@ import deeperImage from 'images/mockups/deeper-life.jpg';
 import exodusImage from 'images/mockups/exodus.jpg';
 import loveWorldImage from 'images/mockups/love-world.jpg';
 import samarithanImage from 'images/mockups/the-good-samarithan.jpg';
+import living from 'images/mockups/living-faith.jpg';
+import peters from 'images/mockups/ministries.jpg';
 import './styles.less';
 
 export const IMAGES = {
@@ -18,6 +20,8 @@ export const IMAGES = {
   [CMS_IMAGE_IDS.EXODUS]: exodusImage,
   [CMS_IMAGE_IDS.LOVE_WORLD]: loveWorldImage,
   [CMS_IMAGE_IDS.SAMARITHAN]: samarithanImage,
+  [CMS_IMAGE_IDS.PETERS_ROCK]: peters,
+  [CMS_IMAGE_IDS.LIVING_FAITH]: living,
 };
 
 export function Product() {

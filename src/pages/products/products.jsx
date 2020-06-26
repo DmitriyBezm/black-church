@@ -12,31 +12,49 @@ import deeperPreview from 'images/mockups/preview/deeper-life.jpg';
 import exodusPreview from 'images/mockups/preview/exodus.jpg';
 import loveWorld from 'images/mockups/preview/love-world.jpg';
 import samarithan from 'images/mockups/preview/the-good-samarithan.jpg';
+import living from 'images/mockups/preview/living-faith.jpg';
+import peters from 'images/mockups/preview/ministries.jpg';
 
 const VIEWS = [
   {
-    id: 3,
+    id: 0,
+    previewSrc: peters,
+    link: CMS_IMAGE_IDS.PETERS_ROCK,
+    title: 'Peter’s Rock Ministries',
+    to: 'peters-rock',
+    theme: CmsPreview.Theme.RED,
+  },
+  {
+    id: 1,
+    previewSrc: living,
+    link: CMS_IMAGE_IDS.LIVING_FAITH,
+    title: 'Living Faith',
+    to: 'living-faith',
+  },
+  {
+    id: 2,
     previewSrc: loveWorld,
     link: CMS_IMAGE_IDS.LOVE_WORLD,
     title: 'Love World',
     to: 'love-world',
+    theme: CmsPreview.Theme.YELLOW,
   },
   {
-    id: 4,
+    id: 3,
     previewSrc: samarithan,
     link: CMS_IMAGE_IDS.SAMARITHAN,
     title: 'The Good Samarithan',
     theme: CmsPreview.Theme.TURQUOISE,
   },
   {
-    id: 0,
+    id: 4,
     previewSrc: deeperPreview,
     link: CMS_IMAGE_IDS.DEEPER,
     title: 'Deeper list',
     theme: CmsPreview.Theme.VIOLET,
   },
   {
-    id: 1,
+    id: 5,
     previewSrc: exodusPreview,
     link: CMS_IMAGE_IDS.EXODUS,
     title: 'Exodus',
